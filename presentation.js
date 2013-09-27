@@ -227,6 +227,7 @@ Quintus.Presentation = function(Q) {
     stage.point("   - performance getting bettter and better");
     stage.point("3. Debugging");
     stage.point("   - mobile support caught up with desktop");
+    stage.point("... Geolocation, multi-touch, Web Sockets\nWeb storage, Joystick");
   });
 
 
@@ -251,24 +252,44 @@ Quintus.Presentation = function(Q) {
 
     stage.title("ASM.js");
 
-    var iframe = new Q.UI.IFrame({ url: "http://www.youtube.com/embed/BV32Cs_CMqo", w: 640, h: 360, x: 192, y: -520, type:0 });
+    var iframe = new Q.UI.IFrame({ url: "http://www.youtube.com/embed/BV32Cs_CMqo", w: 640, h: 360, x: 512, y: -520, type:0 });
 
-    iframe.add("tween").animate({ y: 130 },1,Q.Easing.Quadratic.Out, { delay: 0.5 });
+    iframe.add("tween").animate({ x: 512, y: 330 },1,Q.Easing.Quadratic.Out, { delay: 0.5 });
 
     stage.insert(iframe);
   });
 
   Q.slide(slide++,function(stage) {
     stage.tiles("level0.json");
-    stage.background("background3.png");
+    stage.background("background2.png");
 
     stage.points();
-    stage.title("Android pre 4.0 Means*");
-    stage.point("No hardware accelerated canvas");
-    stage.point("No multi-touch");
-    stage.point("No Chrome for Android");
-    stage.point("Barely pushing out full-screen refreshes");
-    stage.point("*Firefox for Android is available");
+    stage.title("WebRTC & Friends");
+    stage.point("1. Peer-to-peer Audio & Video");
+    stage.point("2. Unreliable data channels");
+    stage.point("3. getUserMedia/Stream APIs");
+    stage.point("FF/Chrome & Chrome Mobile Only");
+  });
+
+  Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("background3.png");
+
+    stage.title("The Trends");
+    stage.point("JS MVC - SVG for Data Vis - HTML5 Everywhere");
+  });
+
+
+  Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("background4.png");
+
+    stage.points();
+    stage.title("JavaScript MVC");
+    stage.point("Solve the JS Organizations problem");
+    stage.point("");
+    stage.point("3. getUserMedia/Stream APIs");
+    stage.point("FF/Chrome & Chrome Mobile Only");
   });
 
 
