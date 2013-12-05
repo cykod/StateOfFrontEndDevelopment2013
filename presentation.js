@@ -276,7 +276,12 @@ Quintus.Presentation = function(Q) {
     stage.background("background3.png");
 
     stage.title("The Trends");
-    stage.point("JS MVC - SVG for Data Vis - HTML5 Everywhere");
+    stage.point("JS MVC - SVG for Data Vis\nPost-Responsive - HTML5 Everywhere");
+
+    stage.on("30%",function() {
+      stage.insert(new Q.Sprite({ asset: "all.jpg", x: 512, y: 380, type: 0, opacity: 0 })
+                                .add("tween").animate({ opacity: 1 }));
+    });
   });
 
 
@@ -286,11 +291,74 @@ Quintus.Presentation = function(Q) {
 
     stage.points();
     stage.title("JavaScript MVC");
-    stage.point("Solve the JS Organizations problem");
-    stage.point("");
-    stage.point("3. getUserMedia/Stream APIs");
-    stage.point("FF/Chrome & Chrome Mobile Only");
+    stage.point("Solve the JS Organization problem\n(aka jQuery soup)");
+    stage.point("Started with Backbone in 2011");
+    stage.point("Post-hype, but now\nthe preferred hammer on the front end");
+    stage.point("jQuery(&-likes) still a component place");
+    stage.point("Developer mindshare between Backbone,\n Angular, and Ember");
+    stage.point("Learning, start with Backbone");
   });
+
+
+  
+ Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("game-background.png");
+
+    stage.title("Google Trends");
+
+    stage.on("10%",function() {
+      stage.insert(new Q.Sprite({ asset: "mvc.png", x: 512, y: 380, type: 0, opacity: 0 })
+                                .add("tween").animate({ opacity: 1 }));
+    });
+ });
+
+ 
+  Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("background3.png");
+
+    stage.points();
+    stage.title("SVG For Data Vis");
+    stage.point("Right tool for the job");
+    stage.point("Now (IE9+) Widely supported");
+    stage.point("D3.js is the hammer");
+    stage.point("Finally, compelling DataVis on the Net\nPaths to the White House"); 
+    stage.point("\"JavaScript Journalism\n");
+  });
+
+
+  Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("background5.png");
+
+    stage.points();
+    stage.title("post-responsive");
+    stage.point("We hold these truths to be self-evident");
+    stage.point("Sites need mobile experiences");
+    stage.point("There's no guarantee on viewport size");
+    stage.point("Responsiveness is (almost) a given");
+    stage.point("But it's NOT the final solution");
+    stage.point("What's next? Tooling,\n Environmental Design, Speed");
+    stage.point("Actually building an effective mobile experience");
+  });
+
+  Q.slide(slide++,function(stage) {
+    stage.tiles("level0.json");
+    stage.background("background5.png");
+
+    stage.points();
+    stage.title("HTML5 Everywhere");
+    stage.point("We hold these truths to be self-evident");
+    stage.point("Sites need mobile experiences");
+    stage.point("There's no guarantee on viewport size");
+    stage.point("Responsiveness is (almost) a given");
+    stage.point("But it's NOT the final solution");
+    stage.point("What's next? Tooling,\n Environmental Design, Speed");
+    stage.point("Actually building an effective mobile experience");
+  });
+
+
 
 
  Q.slide(slide++,function(stage) {
@@ -320,7 +388,8 @@ Quintus.Presentation = function(Q) {
     "moneybg.jpg",  "book.jpg", "background2.png", "background3.png",
     "background4.png","background5.png",
      "hype_cycle.png","global-stats.png", "mobile-stats.png",
-    "alignable-logo-beta.png", "front-end-developers.jpg", "android.jpg", "ie8_logo.jpg"
+     "alignable-logo-beta.png", "front-end-developers.jpg", "android.jpg", "ie8_logo.jpg",
+     "mvc.png", "all.jpg"
   ]);
 
   // Called after preload

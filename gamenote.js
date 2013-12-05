@@ -403,7 +403,8 @@ Quintus.GameNote = function(Q) {
     }
 
     Q.preload(function() {
-      $("#loading").hide();
+      document.getElementById("loading").style.display = "none";
+      //$("#loading").hide();
       Q.presentationSetup();
 
       var sceneName;
@@ -456,7 +457,7 @@ Quintus.GameNote = function(Q) {
     },
     { 
       progressCallback: function(loaded,total) {
-        $("#loading_progress").css({width: Math.floor(loaded/total*100) + "%" });
+        //$("#loading_progress").css({width: Math.floor(loaded/total*100) + "%" });
       }
 
     }
